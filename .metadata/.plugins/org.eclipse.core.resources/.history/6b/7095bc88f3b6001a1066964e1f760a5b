@@ -1,0 +1,18 @@
+package com.onlinecourse.microservices.currencyconverterservice;
+
+import org.springframework.cloud.netflix.ribbon.RibbonClient;
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+
+
+@FeignClient(name = "course-billing-service", url = "localhost:8100")
+
+//@FeignClient(name = "course-billing-service")
+//@RibbonClient(name = "course-billing-service")
+public interface CourseBillingServiceProxy {
+	
+	@GetMapping("/billingService/billingId/{courseId}")
+	public CurrencyConversionBean retriveBillingService(@PathVariable long courseId);
+
+}

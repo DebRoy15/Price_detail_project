@@ -1,0 +1,8 @@
+package com.devprojects.login;
+
+public class LoginService {
+	public boolean validateUser(String user, String password) {
+		return user.equalsIgnoreCase("dev") && password.equals("1234");
+	}
+
+}

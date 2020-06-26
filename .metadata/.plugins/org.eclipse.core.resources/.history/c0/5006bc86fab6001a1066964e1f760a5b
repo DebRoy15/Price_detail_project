@@ -1,0 +1,5 @@
+spring.application.name=course-billing-service
+server.port=8100
+
+course-billing-service.tax= 5
+course-billing-service.discount= 50

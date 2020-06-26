@@ -1,0 +1,5 @@
+package com.onlinecourse.microservices.springbillingservice;
+
+public class BillingCourseBean {
+
+}

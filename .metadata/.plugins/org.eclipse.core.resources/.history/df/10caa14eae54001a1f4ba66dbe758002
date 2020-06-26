@@ -1,0 +1,49 @@
+package helloMRDev;
+
+import java.util.Scanner;
+
+public class CharShift {
+
+	public static void main(String[] args) {
+		
+//		Scanner scan = new Scanner(System.in);
+//		String word = scan.next();
+//		char arr[]= word.toCharArray();
+//		for(int i=0; i<=arr.length-1;i++) {
+//			if(arr[i]=='z') {
+//				arr[i]= 'a';
+//			}
+//			else {
+//			arr[i]=(char) (arr[i]+1);
+//			}
+//		System.out.print(arr[i]);	
+//		}//for shift one chareter
+		
+//		int A = 10;
+//		int B = 20;
+//		A = A+B;
+//		B = A-B;
+//		A = A-B;
+//		System.out.println(A+"   "+B);// Swapping two number withut using third veriable
+		
+		
+//		int temp = 0;
+//		int arr[] = {2,5,4,6,1,10,3,7};
+//		for(int i=0;i<arr.length-1;i++) {
+//			for(int j=0;j<arr.length-i-1;j++) {
+//				if(arr[j]>arr[j+1]) {
+//					temp = arr[j];
+//					arr[j]= arr[j+1];
+//					arr[j+1] = temp;
+//				}
+//			}
+//		}
+//		for(int i=0;i<=arr.length-1;i++) {
+//			System.out.println(arr[i]);
+//		} // Bubble sort
+		
+		
+
+	}
+
+}

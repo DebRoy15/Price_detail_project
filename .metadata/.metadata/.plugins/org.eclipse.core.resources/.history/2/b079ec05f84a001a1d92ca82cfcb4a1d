@@ -1,0 +1,25 @@
+package supai;
+
+import java.util.Arrays;
+
+public class Prob1 {
+
+	public static void main(String[] args) {
+		int ar[]= {10,20,20,10,30,10,50,10,20};
+	  int result=0;
+	 Arrays.sort(ar);
+      for(int i=0;i<=ar.length-1;i++)
+      {
+              if(i+1<ar.length && ar[i]==ar[i+1])
+              {
+                    result++;;
+                    i++;
+          }
+      }
+	System.out.println(result);
+	
+	}
+	
+   
+    	 
+     }

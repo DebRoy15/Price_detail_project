@@ -1,0 +1,30 @@
+package java_Basics;
+
+public class NegativeFirst {
+
+	public static void main(String[] args) {
+		int arr[] = { -3, -4, -5, -6, 7, -8 };
+		int j = 0;
+		for (int i = 0; i <= arr.length - 1; i++) {
+			if (arr[i] < 0) {
+				if (i != j) {
+					swap(arr ,arr[i], arr[j]);
+				}
+				j++;
+			}
+		}
+		for (int i = 0; i <= arr.length - 1; i++) {
+			System.out.print(arr[i] + " ");
+		}
+		System.out.println();
+
+	}
+ static void swap(int arr[],int arr[a], int arrb) {
+		int temp=0;
+		
+		temp = a;
+		a = b;
+		b = temp;
+	}
+
+}

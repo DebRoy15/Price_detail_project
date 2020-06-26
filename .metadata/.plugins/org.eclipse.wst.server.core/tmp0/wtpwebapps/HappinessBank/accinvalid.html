@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Account Number Invalid</title>
+</head>
+<body>
+<h2>Account Number Invalid. please try again</h2>
+<form action ="http://localhost:9090/HappinessBank/RegValidation" method ="post">
+    <label>Name</label>
+    <input type="text" name="name" placeholder="enter name here" pattern="[A-Z][a-z]+" required/>
+    <br/>
+    <label>Age</label>
+    <input type="number" name="age" placeholder = "enter your age here" required/>
+    <br/>
+    <label>Gender</label>
+    <input type="radio" name="gender" value="Female"/><label>Female</label>
+    <input type="radio" name="gender" value="Male"/><label>Male</label>
+    <input type="radio" name="gender" value ="Other"/><label>Other</label>
+    <br/>
+    <label>Email</label>
+    <input type="email" name="email" placeholder="enter your mail here" required/>
+    <br/>
+    <label>Account No</label>
+    <input type="text" name="accno" placeholder = "enter your accunt number" required/>
+    <br/>
+    <label>Password</label>
+    <input type="password" name="pass" placeholder="enter password here" required/>
+    <br/>
+    <label>Confirm Password</label>
+    <input type="password" name="cpass" placeholder="enter password here" required/>
+    <br/>
+    <label>DOB</label>
+    <input type="date" name="dob"/>
+    <br/>
+    <label>Phone number</label>
+    <input type="number" name="phnno" placeholder="enter the number here" />
+    <br/>
+    <label>Balance</label>
+    <input type="number" name="bal" placeholder="Put your money here"/>
+    <br/>
+    <input type="checkbox" required/> I accept <a href="t&c.html">terms and condition</a>
+    <br/>
+    <input type="submit"/>
+    <input type="reset"/>
+</form>    
+</body>
+</html>

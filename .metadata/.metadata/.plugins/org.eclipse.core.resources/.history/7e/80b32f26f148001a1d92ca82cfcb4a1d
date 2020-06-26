@@ -1,0 +1,21 @@
+package java_Basics;
+
+import java.util.Scanner;
+
+public class digitfind 
+{
+	public static void main(String[] args) {
+			Scanner scan = new Scanner(System.in);
+	System.out.println("Enter a String");
+	String str = scan.nextLine();
+    String dig=str.replaceAll("[^0-9]", "");
+    String vowel=str.replaceAll("[^aeiou]", "");
+    String ch=str.replaceAll("[^a-z]", "");
+    String al=ch.replaceAll("[aeiou]", "");
+    
+    System.out.println(dig.length());
+    System.out.println(vowel.length());
+    System.out.println(al.length());
+
+}
+}

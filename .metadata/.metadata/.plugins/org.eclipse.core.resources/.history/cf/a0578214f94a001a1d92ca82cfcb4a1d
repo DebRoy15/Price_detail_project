@@ -1,0 +1,27 @@
+package supai;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Prob1 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter the length");
+		int n = 0;
+		System.out.println("enter the string");
+		String s = scan.nextLine();
+		char[] ar = s.toCharArray();
+		for (int i = 0; i < ar.length; i++) {
+			if (ar[i] == 'U') {
+				n++;
+			}
+			if (ar[i] == 'D') {
+				n--;
+			}
+		}
+		System.out.println(n);
+
+	}
+
+}

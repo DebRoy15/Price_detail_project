@@ -1,0 +1,23 @@
+package java_Basics;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+public class JdbcDemo1 {
+
+	public static void main(String[] args) {
+		try
+		{
+			Class.forName("oracle.jdbc.driver.Oracle Driver");
+			System.out.println("Driver Loaded");
+			Connection con = DriverManager.getConnection("JDBC:Oracle:thin:@//192.168.0.2:1521/xe");
+			
+		}
+		catch(Exception e)
+		{
+			
+		}
+
+	}
+
+}

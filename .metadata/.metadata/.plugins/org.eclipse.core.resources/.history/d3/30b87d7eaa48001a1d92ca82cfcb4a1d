@@ -1,0 +1,28 @@
+package java_Basics;
+
+import java.util.Scanner;
+
+public class FindVowel {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a String");
+		String str = scan.nextLine();
+		int cnt1 =0,cnt2=0;
+		for(int i=0;i<=str.length()-1;i++) {
+			char vol  = str.charAt(i);
+			if(vol== 'a' || vol== 'a' ||vol== 'e' ||vol== 'i' ||vol== 'o' ||vol== 'u')
+			{
+				cnt1++;
+			}
+			else
+			{
+				cnt2++;
+			}
+		}
+				System.out.println("vowels are "+cnt1);
+				System.out.println("consonants are "+cnt2);
+
+	}
+
+}

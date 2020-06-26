@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Extract local variable &apos;sum&apos; from expression &apos;myMath.sum(new int[]{1,2,3})&apos;&#x0D;&#x0A;- Original project: &apos;juit in 5 step&apos;&#x0D;&#x0A;- Variable name: &apos;sum&apos;&#x0D;&#x0A;- Destination method: &apos;com.javaprog.junit.MyMathtest.test()&apos;&#x0D;&#x0A;- Variable expression: &apos;myMath.sum(new int[]{1,2,3})&apos;&#x0D;&#x0A;- Replace occurrences of expression with variable" description="Extract local variable &apos;sum&apos;" final="false" id="org.eclipse.jdt.ui.extract.temp" input="/test&lt;com.javaprog.junit{MyMathtest.java" name="sum" replace="true" selection="221 31" stamp="1591695607508" varType="false" version="1.0"/>
+</session>

@@ -1,0 +1,26 @@
+package java_Basics;
+
+import java.util.HashSet;
+
+public class Hashset {
+// Write a java program to copy the content to the hashset.
+	public static void main(String[] args) {
+		HashSet<Integer> hs = new HashSet<Integer>();
+		hs.add(10);
+		hs.add(50);
+		hs.add(65);
+		hs.add(150);
+		hs.add(175);
+		hs.add(100);
+		System.out.println(hs);
+		System.out.println("_______________________");
+		Object arr[] = new Integer[hs.size()];
+		arr = hs.toArray();	
+		for(Object x : arr)
+		{
+			System.out.println(x);
+		}
+
+	}
+
+}

@@ -1,0 +1,48 @@
+package java_Basics;
+
+import java.util.Scanner;
+
+public class Fibonacci {
+
+	public static void main(String[] args) {
+		Scanner scan= new Scanner(System.in);
+		System.out.println("enter the value");
+		int val = scan.nextInt(),sum=0;
+		int fib1 = 0;
+		int fib2 =1;
+		/*if(val==0) {
+			System.out.println(fib1);
+		}
+		else
+		{
+		System.out.println(fib1 +"\n"+ fib2);
+		while (sum+fib1 <= val) {
+			sum= fib1 + fib2;
+			System.out.println(sum);
+			fib1=fib2;
+			fib2=sum;
+		}
+		}
+		*/
+		if(val == 1)
+		{
+			System.out.println(fib1);
+		}
+		else if(val == 2)
+		{
+			System.out.println(fib1+"\n"+ fib2);
+		}
+		else {
+			System.out.println(fib1+"\n"+fib2);
+			for(int i=3;i<=val;i++)
+			{
+				sum= fib1 + fib2;
+				System.out.println(sum);
+				fib1=fib2;
+				fib2=sum;
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,32 @@
+package exam;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Collection {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+
+		Student s1 = new Student("Ram",22,"male",51);
+		Student s2 = new Student("Sita",18,"female",48);
+		Student s3 = new Student("Hanman",20,"male",56);
+		String str = new String("Ravana");
+		ArrayList al = new ArrayList();
+		al.add(s1);
+		al.add(s2);
+		al.add(s3);
+		al.add(str);
+		System.out.println(al);
+		Help help = new Help();
+		Collections.sort(al,help);
+		System.out.println(al);
+		
+		
+
+	}
+
+}

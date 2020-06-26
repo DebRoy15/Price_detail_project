@@ -1,0 +1,142 @@
+package com.onlinecourse.microservices.currencyconverterservice;
+
+import java.math.BigDecimal;
+
+public class CurrencyConversionBean {
+	private Long id;
+	//from billing service
+	private Long courseId;
+	private String courseName;
+	private BigDecimal coursePrice;
+	private BigDecimal tax;
+	private BigDecimal discount;
+	private BigDecimal finalPrice;
+	//from exchange service
+	private String from;
+	private String to;
+	private BigDecimal conversionMultiple;
+	private BigDecimal convertedPrice;
+	private int port;
+
+	public CurrencyConversionBean() {
+
+	}
+
+	public CurrencyConversionBean(Long id, Long courseId, String courseName, int coursePrice, int tax, int discount,
+			int finalPrice, String from, String to, int conversionMultiple, int convertedPrice,
+			int port) {
+		super();
+		this.id = id;
+		this.courseId = courseId;
+		this.courseName = courseName;
+		this.coursePrice = coursePrice;
+		this.tax = tax;
+		this.discount = discount;
+		this.finalPrice = finalPrice;
+		this.from = from;
+		this.to = to;
+		this.conversionMultiple = conversionMultiple;
+		this.convertedPrice = convertedPrice;
+		this.port = port;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Long getCourseId() {
+		return courseId;
+	}
+
+	public void setCourseId(Long courseId) {
+		this.courseId = courseId;
+	}
+
+	public String getCourseName() {
+		return courseName;
+	}
+
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+
+	public int getCoursePrice() {
+		return coursePrice;
+	}
+
+	public void setCoursePrice(int coursePrice) {
+		this.coursePrice = coursePrice;
+	}
+
+	public int getTax() {
+		return tax;
+	}
+
+	public void setTax(int tax) {
+		this.tax = tax;
+	}
+
+	public int getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(int discount) {
+		this.discount = discount;
+	}
+
+	public int getFinalPrice() {
+		return finalPrice;
+	}
+
+	public void setFinalPrice(int finalPrice) {
+		this.finalPrice = finalPrice;
+	}
+
+	public String getFrom() {
+		return from;
+	}
+
+	public void setFrom(String from) {
+		this.from = from;
+	}
+
+	public String getTo() {
+		return to;
+	}
+
+	public void setTo(String to) {
+		this.to = to;
+	}
+
+	public int getConversionMultiple() {
+		return conversionMultiple;
+	}
+
+	public void setConversionMultiple(int conversionMultiple) {
+		this.conversionMultiple = conversionMultiple;
+	}
+
+	public int getConvertedPrice() {
+		return convertedPrice;
+	}
+
+	public void setConvertedPrice(int convertedPrice) {
+		this.convertedPrice = convertedPrice;
+	}
+
+	public int getPort() {
+		return port;
+	}
+
+	public void setPort(int port) {
+		this.port = port;
+	}
+	
+	
+	
+
+}

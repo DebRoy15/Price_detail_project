@@ -1,0 +1,12 @@
+package Exam;
+
+import java.util.Arrays;
+
+public class Problem {
+	public static void main(String[] args) {
+      int [] num1 = {4,6,8};
+      int [] num2 = {1,2,3};
+      System.out.println(Arrays.equals(num1,num2));
+	
+	}
+}

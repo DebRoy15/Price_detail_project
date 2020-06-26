@@ -1,0 +1,54 @@
+package helloMRDev;
+
+import java.util.Scanner;
+
+public class Switchon {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int bulb = scan.nextInt();//number of the bulb
+		int brr[]= new int[bulb];// array of the bulbs
+		int count=0;
+		int nComm = scan.nextInt();// number of the commands
+		String arr[]= new String[nComm];// no of the commands
+		for(int i =0;i<= arr.length-1;i++) {
+			arr[i]= scan.next();
+		}
+		for(int i =0;i<= arr.length-1;i++)// for display purpose
+		{
+			System.out.println(arr[i]);
+		}
+		int start;
+		int end;
+		for(int i=0;i<=arr.length-1;i++)
+		{
+			String Command = arr[i].substring(0,arr[i].length()-2);
+		   if(Command.equalsIgnoreCase("c")) {
+			   start = Character.getNumericValue(arr[i].charAt(arr[i].length()-2));
+			   end = Character.getNumericValue(arr[i].charAt(arr[i].length()-1));
+			   for(int j =start;j<=end;j++) {
+				   if(brr[start]==1 ) {
+				   count++;
+					   }
+			    }
+		   }
+		   
+		   else if(Command.equalsIgnoreCase("f")) {
+			   start = Character.getNumericValue(arr[i].charAt(arr[i].length()-2));
+			   end = Character.getNumericValue(arr[i].charAt(arr[i].length()-1));
+			   for(int j =start;j<=end;j++) {
+			    	if(brr[j]==1) {
+			    		brr[j]=0;
+			    	}
+			    	else {
+			    		brr[j]=1;
+			    	}
+			    }
+		   }
+	         System.out.println(count);
+		     count = 0;
+		}
+		    	
+	}
+
+}

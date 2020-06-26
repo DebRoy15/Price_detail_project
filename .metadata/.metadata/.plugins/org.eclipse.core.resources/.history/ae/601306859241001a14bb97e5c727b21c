@@ -1,0 +1,23 @@
+package practice;
+
+public class InsertionSort {
+
+	public static void main(String[] args) {
+		int n=5;
+		int j,item;
+		int arr[]= {86, 42, 32, 18, 23};
+		for(int i=1;i<=n-1;i++)
+		{
+			item=arr[i];
+			j=i-1;
+			while(j>=0 && arr[j]>item)
+			{
+				arr[j+1]=arr[j];
+				j--;
+			}
+			arr[j+1]=item;
+		}
+
+	}
+
+}

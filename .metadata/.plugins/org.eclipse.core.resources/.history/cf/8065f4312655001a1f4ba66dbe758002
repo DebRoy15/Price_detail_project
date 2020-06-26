@@ -1,0 +1,53 @@
+package helloMRDev;
+
+import java.util.Scanner;
+
+public class Switchon {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int bulb = scan.nextInt();//number of the bulb
+		int brr[]= new int[bulb];// array of the bulbs
+		int count=0;
+		int nComm = scan.nextInt();// number of the commands
+		String arr[]= new String[nComm];// no of the commands
+		for(int i =0;i<= arr.length-1;i++) {
+			arr[i]= scan.next();
+		}
+		for(int i =0;i<= arr.length-1;i++)// for display purpose
+		{
+			System.out.println(arr[i]);
+		}
+		int start=0;
+		int end=0;
+		for(int i=0;i<=arr.length-1;i++)
+		{
+			String Command = arr[i].substring(0,arr[i].length()-2);
+			start = Character.getNumericValue(arr[i].charAt(arr[i].length()-2));
+			end = Character.getNumericValue(arr[i].charAt(arr[i].length()-1));
+		   if(Command.equalsIgnoreCase("c")) {
+			   for(int j =start;j<=end;j++) {
+				   if(brr[start]==1 ) {
+				   count++;
+					   }
+			    }
+		         System.out.println(end);
+			    count=0;
+		   }
+		   
+		   else if(Command.equalsIgnoreCase("f")) {
+			   for(int j =start;j<=end;j++) {
+			    	if(brr[j]==1) {
+			    		brr[j]=0;
+			    	}
+			    	else {
+			    		brr[j]=1;
+			    	}
+			    }
+		   }
+
+		}
+		    	
+	}
+
+}

@@ -1,0 +1,103 @@
+package java_Dbms;
+
+import java.sql.*;
+import java.util.Scanner;
+
+public class DbmsMethods {
+	static Connection conn;
+
+	 static Connection connectDbms() {
+
+		
+		String path = "com.mysql.jdbc.Driver";
+		String url = "jdbc:mysql://localhost:3306/Kodnest";
+		try {
+
+			Class.forName(path);
+
+			// Establish Connection
+		 conn = DriverManager.getConnection(url, "root", "hellotest1234");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return conn;
+
+	}
+
+	public static  void registration() {
+		try {
+				conn = DbmsMethods.connectDbms();
+				PreparedStatement ps = conn.prepareStatement("insert into NovStudent values(?,?,?,?,?,?,?)");
+
+				Scanner scan = new Scanner(System.in);
+				System.out.println("Enter Usn");
+				String usn = scan.nextLine();
+				System.out.println("Enter Name");
+				String name = scan.nextLine();
+				System.out.println("Enter Password");
+				String password = scan.nextLine();
+				System.out.println("Enter M1");
+				int m1 = scan.nextInt();
+				System.out.println("Enter M2");
+				int m2 = scan.nextInt();
+				System.out.println("Enter M3");
+				int m3 = scan.nextInt();
+				System.out.println("Enter avg");
+				int avg = scan.nextInt();
+				ps.setString(1, usn);
+				ps.setString(2, name);
+				ps.setString(3, password);
+				ps.setInt(4, m1);
+				ps.setInt(5, m2);
+				ps.setInt(6, m3);
+				ps.setInt(7, avg);
+				int count = ps.executeUpdate();
+				System.out.println(count +" rows affected");
+				ps.close();
+				conn.close();
+
+		} 
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+
+	public static void logIn() {
+		String usn ="";
+		String password="";
+
+		try {
+			conn = DbmsMethods.connectDbms();
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Enter the user name");
+			String usn1 = scan.nextLine();
+			System.out.println("Enter the password");
+			String pass = scan.nextLine();
+			String sql = "Select * from NovStudent where usn=? and password=?";
+			 PreparedStatement ps=conn.prepareStatement(sql);
+		       ps.setString(1,usn1);
+		       ps.setString(2,pass);
+		       ResultSet rs=ps.executeQuery();
+		       if(rs.next()) {
+		          System.out.println("login succesfull");
+		       }
+		       else{
+		          System.out.println("login unsucessful");
+		       }
+			rs.close();
+			ps.close();
+			conn.close();
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+	public static void exit()
+	{
+		System.exit(0);
+	}
+
+}

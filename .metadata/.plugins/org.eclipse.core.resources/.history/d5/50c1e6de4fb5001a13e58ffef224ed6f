@@ -1,0 +1,8 @@
+insert into exchange_value(courseId,courseName,coursePrice)
+values(10001,'Self Motivation',1000);
+insert into exchange_value(courseId,courseName,coursePrice)
+values(10002,'Personality Development',1200);
+insert into exchange_value(courseId,courseName,coursePrice)
+values(10003,'Business Mind',1200);
+insert into exchange_value(courseId,courseName,coursePrice)
+values(10004,'Java Core',1400);

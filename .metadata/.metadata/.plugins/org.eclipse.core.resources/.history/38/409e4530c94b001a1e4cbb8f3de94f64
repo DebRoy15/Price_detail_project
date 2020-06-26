@@ -1,0 +1,16 @@
+package java_Basics;
+
+public class Fibonacci {
+
+	public static void main(String[] args) {
+		int val = 6;
+		while (val >= 0) {
+			if (val == (val - 1) + (val - 2)) {
+				System.out.println(val);
+			}
+			val--;
+		}
+
+	}
+
+}

@@ -1,0 +1,106 @@
+package java_Dbms;
+
+import java.sql.*;
+import java.util.Scanner;
+
+public class DbmsMethods {
+
+	public static Connection connectDbms() {
+
+		Connection conn = null;
+		String path = "com.mysql.jdbc.Connection";
+		String url = "jdbc:mysql://localhost:3306/Kodnest";
+		String user = "";
+		String pwd = "";
+		try {
+
+			Class.forName(path);
+
+			// Establish Connection
+			conn = DriverManager.getConnection(url, "root", "hellotest1234");
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return conn;
+
+	}
+
+	public static void registration() {
+		try {
+
+			Connection conn = DbmsMethods.connectDbms();
+			// Create a statement
+
+			PreparedStatement ps = conn.prepareStatement("insert into NovStudent values(?,?,?,?,?,?,?)");
+
+			Scanner scan = new Scanner(System.in);
+			System.out.println("Enter Usn");
+			String usn = scan.nextLine();
+			System.out.println("Enter Name");
+			String name = scan.nextLine();
+			System.out.println("Enter Password");
+			String password = scan.nextLine();
+			System.out.println("Enter M1");
+			int m1 = scan.nextInt();
+			System.out.println("Enter M2");
+			int m2 = scan.nextInt();
+			System.out.println("Enter M3");
+			int m3 = scan.nextInt();
+			System.out.println("Enter avg");
+			int avg = scan.nextInt();
+			ps.setString(1, usn);
+			ps.setString(2, name);
+			ps.setString(3, password);
+			ps.setInt(4, m1);
+			ps.setInt(5, m2);
+			ps.setInt(6, m3);
+			ps.setInt(7, avg);
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return;
+	}
+
+	public static String logIn(String username, String pass) {
+
+		try {
+			Connection conn = DbmsMethods.connectDbms();
+			Statement st = conn.createStatement();
+			
+			ResultSet rs = st.executeQuery("select * from NovStudent");
+			
+			while(rs.next()) {
+				String usn = rs.getString("usn");
+				String password = rs.getString("password");
+			}
+			
+			Scanner scan = new Scanner(System.in);
+			st.executeQuery("select usn,password from NovStudent");
+			System.out.println("Enter the user name");
+			String usn1 = scan.nextLine();
+			System.out.println("Enter password");
+			String password1 = scan.nextLine();
+			
+			if(usn != usn1 && password != password1)
+			{
+				System.out.println("usn or password incorrect");
+			}
+			else
+			{
+				System.out.println("Login succesful");
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return pass;
+	}
+
+	public static void exit() {
+		// TODO Auto-generated method stub
+		System.out.println("Bye bye");
+	}
+
+}

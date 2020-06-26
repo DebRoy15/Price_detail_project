@@ -1,0 +1,27 @@
+package helloMRDev;
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        for(int i= 1;i<=num;i++) {
+        String s[] = {scan.nextLine(),"",""};
+        for(int j=0;j<=s[0].length()-1;j++) {
+        	if(j%2==0)
+        		s[1]+=s[0].charAt(j);
+        	else
+        		s[2] += s[0].charAt(j);
+        }
+        	System.out.println(s[1]+" "+s[2]);
+        }
+
+    }
+}

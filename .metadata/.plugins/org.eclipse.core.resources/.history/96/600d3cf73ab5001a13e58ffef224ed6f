@@ -1,0 +1,27 @@
+package com.onlinecourse.microservices.springbillingservice;
+
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.stereotype.Component;
+
+@Component
+@ConfigurationProperties("course-billing-service")
+public class TaxandDiscountConfiguration {
+	
+	private int tax;
+	private int discount;
+	
+	
+	public int getTax() {
+		return tax;
+	}
+	public void setTax(int tax) {
+		this.tax = tax;
+	}
+	public int getDiscount() {
+		return discount;
+	}
+	public void setDiscount(int discount) {
+		this.discount = discount;
+	}
+
+	

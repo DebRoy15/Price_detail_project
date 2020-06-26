@@ -1,0 +1,7 @@
+spring.application.name=course-getting-service
+server.port=8200
+
+spring.jpa.show-sql=true
+spring.h2.console.enabled=true
+
+

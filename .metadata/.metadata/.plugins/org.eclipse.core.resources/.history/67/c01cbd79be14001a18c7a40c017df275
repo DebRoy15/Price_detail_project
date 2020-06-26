@@ -1,0 +1,17 @@
+package exam;
+
+public class Poblem2 {
+	public static void main(String[] args){
+	      String a[] = {"a","b","c","d"};
+	      String b[] = {"a","c"};
+	      int n1= a.length;
+	      int n2= b.length;
+	      
+		for(int i=0;i<=n1-1;i++)
+			for(int j=0;j<=n2-1;j++)
+				if(i!=j)
+					System.out.println(a[i]);
+		
+	}
+
+}

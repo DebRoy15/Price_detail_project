@@ -1,0 +1,12 @@
+package com.onlinecourse.microservices.springbillingservice;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@FeignClient(name="course-getting-service", url="localhost:8200")
+public interface CourseGettingServiceProxy {
+
+	@GetMapping("/getting-course-details/{courseId}")
+	public BillingCourseBean retrieveExchangeValue(String courseid);
+
+}

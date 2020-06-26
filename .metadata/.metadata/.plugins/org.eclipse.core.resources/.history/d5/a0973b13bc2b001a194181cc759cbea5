@@ -1,0 +1,20 @@
+package exam;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Occerence {
+	
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        String a = sc.nextLine();
+	        char al[] = a.toCharArray();
+	        
+	        for(int i=1;i<=al.length;i++)
+	        {
+	        	if(al[i]>='a' && al[i] <='z')
+	        	{
+	        		al[i]= (char) (al[i]+1);
+	        	}
+	        }
+	        System.out.println(al);
+	    }
+}

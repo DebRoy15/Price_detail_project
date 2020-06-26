@@ -1,0 +1,44 @@
+package java_Basics;
+
+import java.text.NumberFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class BillPayment {
+
+	public static void main(String[] args) {
+
+//		Scanner scan = new Scanner(System.in);
+//		int n = scan.nextInt();
+//		int k = scan.nextInt();
+//
+//		int bill[] = new int[n];
+//		int sum = 0;
+//		for (int i = 0; i <= bill.length - 1; i++) {
+//			bill[i] = scan.nextInt();
+//			sum = sum + bill[i];
+//		}
+//		int psum = sum / 2;
+//		int apsum = (sum - bill[k]) / 2;
+//		int b = scan.nextInt();
+//		if (b == psum) {
+//			System.out.println(psum - apsum);
+//		} else {
+//			System.out.println("Bon Appetit");
+//		}
+		Scanner sc=new Scanner(System.in);
+        String A=sc.next();
+        char A1[] = A.toCharArray();
+        char A2[]=new char[A.length()];
+        int j=0;
+        for(int i=A1.length-1;i>=0;i--)
+        {
+        	A2[j]=A1[i];
+        	j++;
+        }
+     System.out.println(A2);
+        
+	}     
+	}
+
+

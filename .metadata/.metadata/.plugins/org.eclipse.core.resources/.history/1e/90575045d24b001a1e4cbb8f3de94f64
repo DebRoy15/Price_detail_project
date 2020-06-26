@@ -1,0 +1,37 @@
+package java_Basics;
+
+import java.util.Scanner;
+
+public class Duplicate {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("enter the value");
+		int len = scan.nextInt();
+		int arr[] = new int[len];
+		int arr2[] = new int[len];
+		for (int i = 0; i <= arr.length - 1; i++) {
+			arr[i] = scan.nextInt();
+		}
+		for (int i = 0; i <= arr.length - 1; i++) {
+			for (int j = i + 1; j <= arr.length - 1; j++) {
+				if (arr[i] == arr[j]) {
+					arr[j] = 999;
+
+				}
+			}
+		}
+		
+		for (int i = 0; i <= arr2.length - 1; i++) {
+			if (arr[i] != 999) {
+				arr2[i] = arr[i];
+			}
+		}
+
+		for (int i = 0; i <= arr2.length - 1; i++) {
+			if(arr2[i]!=0)
+			System.out.println(arr2[i]);
+		}
+	}
+
+}

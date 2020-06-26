@@ -1,0 +1,18 @@
+package com.onlinecourse.microservices.currencyconverterservice;
+
+import java.math.BigDecimal;
+
+public class CurrencyConversionBean {
+	
+	private Long id;
+	private String from;
+	private String to;
+	private BigDecimal conversionMultiple;
+	private int port;
+	
+	//extra in addition in conversion service
+	private BigDecimal quantity;
+	private BigDecimal totalCalculatedAmount;
+	
+
+}

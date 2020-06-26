@@ -1,0 +1,45 @@
+package java_Basics;
+
+import java.text.NumberFormat;
+import java.util.Locale;
+import java.util.Scanner;
+
+public class BillPayment {
+
+	public static void main(String[] args) {
+
+//		Scanner scan = new Scanner(System.in);
+//		int n = scan.nextInt();
+//		int k = scan.nextInt();
+//
+//		int bill[] = new int[n];
+//		int sum = 0;
+//		for (int i = 0; i <= bill.length - 1; i++) {
+//			bill[i] = scan.nextInt();
+//			sum = sum + bill[i];
+//		}
+//		int psum = sum / 2;
+//		int apsum = (sum - bill[k]) / 2;
+//		int b = scan.nextInt();
+//		if (b == psum) {
+//			System.out.println(psum - apsum);
+//		} else {
+//			System.out.println("Bon Appetit");
+//		}
+        Scanner scanner = new Scanner(System.in);
+        double payment = scanner.nextDouble();
+        scanner.close();
+        Locale indiaLocale = new Locale("en", "IN");
+        
+        NumberFormat us = NumberFormat.getCurrencyInstance(Locale.US);
+        NumberFormat india = NumberFormat.getCurrencyInstance(indiaLocale);
+        NumberFormat china = NumberFormat.getCurrencyInstance(Locale.CHINA);
+        NumberFormat france = NumberFormat.getCurrencyInstance(Locale.FRANCE);
+        
+        System.out.println("US: " + us.format(payment));
+        System.out.println("India: " + india.format(payment));
+        System.out.println("China: " + china.format(payment));
+        System.out.println("France: " + france.format(payment));
+	}
+
+}

@@ -1,0 +1,34 @@
+package supai;
+import java.util.Scanner;
+public class Prob1 {
+
+	public static void main(String[] args) {
+		Scanner scan= new Scanner(System.in);
+		System.out.println("Enter the paragraph");
+		String paragraph = scan.nextLine();
+		System.out.println(paragraph);
+		System.out.println("Enter a number either 0 or 1");
+		int num = scan.nextInt();
+		System.out.println(num);
+		
+		System.out.println(solution(paragraph,num));
+		
+     
+	}
+     public static String solution(String paragraph,int num) {
+    	 String result = paragraph.toLowerCase();
+		return result;
+    	 
+    	/* String array[]= {paragraph};
+    	 if (num==0) 
+    	 for(int i=0;i<array.length;i++) {
+    	 
+    	 }
+    	 else if (num==1)
+    	for(int i =array.length-1;i>=0;i++) {
+    	*/	
+    	}
+   
+   
+    	 
+     }

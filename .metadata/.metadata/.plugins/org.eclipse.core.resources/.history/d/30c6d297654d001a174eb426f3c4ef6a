@@ -1,0 +1,49 @@
+package exam;
+
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Scanner;
+
+public class Collection {
+
+	public static void main(String[] args) {
+		Scanner scan=new Scanner(System.in);
+		LinkedList ll = new LinkedList();
+		ll.add(10);
+		ll.add(20);
+		ll.add(30);
+		ll.add(true);
+		ll.add("Hello");
+		ll.add('$');
+		System.out.println(ll);
+		System.out.println(".......................");
+		System.out.println(ll.isEmpty());
+		System.out.println(".......................");
+		System.out.println(ll.getFirst());
+		System.out.println(".......................");
+		System.out.println(ll.getLast());
+		System.out.println(".......................");
+		System.out.println(ll.lastIndexOf("hello"));
+		System.out.println(".......................");
+		System.out.println(ll.peek());
+		System.out.println(ll);
+		System.out.println(".......................");
+		System.out.println(ll.poll());
+		System.out.println(ll);
+		System.out.println(".......................");
+		Student s1 = new Student("Ram",22,"male",51);
+		Student s2 = new Student("Sita",18,"female",48);
+		Student s3 = new Student("Hanman",20,"male",56);
+		String str = new String("Ravana");
+		ArrayList al = new ArrayList();
+		al.add(s1);
+		al.add(s2);
+		al.add(s3);
+		al.add(str);
+		System.out.println(al);
+		
+		
+
+	}
+
+}

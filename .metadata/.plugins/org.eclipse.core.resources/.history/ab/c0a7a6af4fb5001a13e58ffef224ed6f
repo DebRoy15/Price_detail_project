@@ -1,0 +1,12 @@
+package com.onlinecourse.microservices.coursegettingservice;
+
+import java.util.List;
+
+public interface CoursesDetailsRepository {
+
+	List<CoursesBean> getAllCourse();
+	
+	CoursesBean findByCourseId(int courseId);
+	
+
+}

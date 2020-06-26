@@ -1,0 +1,31 @@
+package helloMRDev;
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        int num = scan.nextInt();
+        for(int i= 1;i<=num;i++) {
+        	String word = scan.nextLine();
+        	char wordarr[] = word.toCharArray();
+        	for(int j =0;j<=word.length()-1;j++){
+        		if(i%2 ==0) {
+        			System.out.println(wordarr[j]);
+        		}
+        		else {
+        			System.out.println(wordarr[j]);
+        		}
+        		
+        	}
+        	
+        }
+
+    }
+}

@@ -1,0 +1,12 @@
+package com.devprojects.login;
+
+import org.springframework.stereotype.Service;
+
+public class LoginService {
+	
+	@Service
+	public boolean validateUser(String user, String password) {
+		return user.equalsIgnoreCase("dev") && password.equals("1234");
+	}
+
+}

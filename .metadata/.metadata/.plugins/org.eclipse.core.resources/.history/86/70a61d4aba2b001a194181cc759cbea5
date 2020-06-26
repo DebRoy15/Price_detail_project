@@ -1,0 +1,38 @@
+package exam;
+import java.util.Scanner;
+public class Occerence {
+	
+	    public static void main(String[] args) {
+	        Scanner sc = new Scanner(System.in);
+	        System.out.println("Enter the number of billed item");
+	        int n = sc.nextInt();
+	        int[] ar = new int[n];
+	        System.out.println("Enter the prices of the bill");
+	        for(int i=0;i<ar.length;i++)
+	        {
+	        ar[i]= sc.nextInt();
+	        }
+
+	        int total = 0;
+	        for(int i=0;i<ar.length;i++)
+	        {
+	            total= total+ar[i];
+	        }
+	        System.out.println("Enter the amount of the item that ana didn't eat");
+	        int k = sc.nextInt();
+	        total = (total - ar[k])/2;
+	        System.out.println("enter the amount that bill take from ana");
+	        int amount = sc.nextInt();
+	        int value = total- amount;
+
+	        if(value ==0)
+	        {
+	            System.out.println("Bon Appetit");
+	        }
+	        else
+	        {
+	            System.out.println("ana will get  "+value);
+	        }
+	    
+	    }
+	}

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Registration page</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar bg-dark navbar-dark navbar-expand-lg">
+      <div class="container">
+        <a href="index.html" class="navbar-brand"
+          ><img src="resources/img/Happiness Bank.png" alt="Brand"
+        /></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarMenu"
+          aria-controls="navbarMenu"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="clear-fix"></div>
+
+    <div
+      style="
+        padding-right: 25%;
+        padding-left: 25%;
+        padding-top: 50px;
+        padding-bottom: 50px;
+      "
+      class="container"
+    >
+    <div class="myFrom">
+      <h2>Registration from</h2>
+      <form action="http://localhost:9090/HappinessBank/RegValidation" method="post" id="form1">
+        <div class="from-group">
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            name="name"
+            class="form-control"
+            id="name"
+            placeholder="write name here"
+            pattern="[A-Z][a-z]+"
+            required
+          />
+        </div>
+        <br />
+        <div class="from-group">
+          <label for="age">Your Age</label>
+          <input
+            type="number"
+            name="age"
+            class="form-control"
+            placeholder="enter your age here"
+            min="18"
+            max="55"
+            id="age"
+            required
+          />
+        </div>
+        <div class="from-group">
+          <label for="gender">Gender</label>
+          <input
+            type="radio"
+            name="gender"
+            value="Female"
+            class="form-control"
+            id="gender"
+          /><label>Female</label>
+          <input
+            type="radio"
+            name="gender"
+            value="Male"
+            class="form-control"
+          /><label>Male</label>
+          <input
+            type="radio"
+            name="gender"
+            value="Other"
+            class="form-control"
+          /><label>Other</label>
+        </div>
+        <div class="from-group">
+          <label for="email">Your email</label>
+          <input
+            type="text"
+            class="form-control"
+            id="email"
+            placeholder="write email here"
+          />
+        </div>
+        <div class="from-group">
+          <label for="accountno">Account No</label>
+          <input
+            type="text"
+            class="form-control"
+            id="account"
+            placeholder="write account no here"
+          />
+        </div>
+        <div class="from-group">
+          <label for="password">Password</label>
+          <input
+            type="text"
+            class="form-control"
+            id="password"
+            name="password"
+            placeholder="write write password here"
+          />
+        </div>
+        <div class="from-group">
+          <label for="password">Confirm Password</label>
+          <input
+            type="text"
+            class="form-control"
+            id="password"
+            placeholder="write write password here"
+          />
+        </div>
+        <div class="from-group">
+          <label for="birth">Date of birth</label>
+          <input type="date" class="form-control" name="dob" />
+        </div>
+        <div class="from-group">
+          <label for="phoneno">Phone Number</label>
+          <input
+            type="number"
+            class="form-control"
+            name="phoneno"
+            placeholder="enter phone number here"
+          />
+        </div>
+        <div class="from-group">
+          <label for="Balance">Opening Balance</label>
+          <input
+            type="number"
+            class="form-control"
+            name="bal"
+            placeholder="put your money here"
+          />
+        </div>
+        <input type="checkbox" required /> I accept
+        <a href="t&c.html">terms and condition</a>
+        <br />
+        <button type="submit" form="form1" value="Submit" class="btn btn-primary">Click to register</button>
+        <button type="button" class="btn btn-primary" style="float: right;">
+          <a style="color: white;" href="index.html"> Back to home page</a>
+        </button>
+      </form>
+      </div>
+    </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

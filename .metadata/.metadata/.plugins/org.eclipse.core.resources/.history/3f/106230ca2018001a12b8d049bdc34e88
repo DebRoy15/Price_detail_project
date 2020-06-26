@@ -1,0 +1,32 @@
+package exam;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Occerence {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter the length of the array");
+		int length = scan.nextInt();
+		int a[] = new int[length];
+		System.out.println("Enter some value");
+		for(int i=0;i<length;i++) {
+		a[i]=scan.nextInt();	
+		}
+		     Arrays.sort(a);     
+		System.out.println("Enter the num");
+        int num = scan.nextInt();
+        
+        for(int j=0;j<length;j++) {
+        	int k,l;
+        	for(k=0;k<length;k++) {
+        		l=k+1;
+        		if(num==k+l) {
+        			System.out.println(k+","+l);
+        		}
+        	}
+        	}
+	}
+
+}

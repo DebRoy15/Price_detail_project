@@ -1,0 +1,31 @@
+package java_Dbms;
+
+import java.util.Scanner;
+
+public class Demo1 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+	B: while(true) {
+			System.out.println("Welcome Sir");
+			System.out.println("Enter  1 for Registration \nENter 2 for logIn \nEnter 3 for Exit");
+			int choice = scan.nextInt();
+			switch (choice) {
+			case 1:
+				DbmsMethods.registration();
+				break;
+			case 2:
+
+				DbmsMethods.logIn();
+				break;
+
+			case 3:
+				DbmsMethods.exit();
+				break B;
+			}
+		}
+		
+		
+
+	}
+}

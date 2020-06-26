@@ -1,0 +1,25 @@
+package java_Basics;
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class Game1 {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter len");
+		int len = scan.nextInt();
+		int arr[] = new int[len];
+		int arr2[] = new int[len];
+		int sum = 0;
+		int move = 21 / len;
+		System.out.println("Enter value and it should be max 4");
+		for (int i = 0; i <= arr.length - 1; i++) {
+			arr[i] = scan.nextInt();
+			System.out.print(move - arr[i] + " ");
+		}
+		System.out.println();
+
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.onlinecourse.microservices.springbillingservice;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RestController;
+
+
+
+@RestController
+public class BillingServiceController {
+	
+	@Autowired
+	private CourseGettingServiceProxy proxy;
+	
+	@Autowired
+	private TaxandDiscountConfiguration configuration;
+	
+	@GetMapping("/billingService/billingId/{courseId}")
+	public BillingCourseBean BillingServiceFeign(@PathVariable long courseId) {
+		
+		BillingCourseBean response = proxy.retrieveCourseValues(courseId);
+		
+	return new BillingCourseBean (courseId, response.getCourseName(), response.getCoursePrice(), configuration.getTax(),
+		   configuration.getDiscount(), response.getCoursePrice()-((response.getCoursePrice()*configuration.getDiscount())/100)+configuration.getTax());
+	}
+	
+
+}

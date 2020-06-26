@@ -1,0 +1,10 @@
+package com.onlinecourse.microservices.springbillingservice;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient(name="course-getting-service", url="localhost:8200")
+public interface CourseGettingServiceProxy {
+
+	public BillingCourseBean retrieveExchangeValue(String courseid);
+
+}

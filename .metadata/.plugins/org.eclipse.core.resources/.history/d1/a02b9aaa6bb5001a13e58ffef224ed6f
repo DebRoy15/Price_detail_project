@@ -1,0 +1,13 @@
+package com.onlinecourse.microservices.springbillingservice;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringBillingServiceApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringBillingServiceApplication.class, args);
+	}
+
+}

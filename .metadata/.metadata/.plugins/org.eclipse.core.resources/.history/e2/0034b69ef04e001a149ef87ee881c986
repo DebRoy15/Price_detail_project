@@ -1,0 +1,22 @@
+package exam;
+
+public class Student {
+
+		String name;
+		int age;
+		String gender;
+		int rollNo;
+		public Student(String name,int age,String gender,int rollNo)
+		{
+			this.name = name;
+			this.age= age;
+			this.gender=gender;
+			this.rollNo=rollNo;
+		}
+		public String toString(){
+			return name+" "+age+" "+gender+" "+rollNo;
+		}
+
+	}
+
+

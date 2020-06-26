@@ -1,0 +1,15 @@
+package com.onlinecourse.microservices.coursegettingservice;
+
+import java.util.List;
+
+import com.onlinecourse.microservices.coursegettingservice.coursecontrol.Courses;
+
+public interface CourseService {
+
+	List<Courses> getAllCourse();
+	
+	Courses getCourseById(int courseId);
+	
+	  void addCourse(Courses course);
+
+}

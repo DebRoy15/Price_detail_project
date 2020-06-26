@@ -1,0 +1,51 @@
+package com.onlinecourse.microservices.coursegettingservice;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
+@Entity
+public class CoursesBean {
+
+	@Id
+	@GeneratedValue
+	private int courseid;
+	private String coursename;
+	private int price;
+
+	public CoursesBean() {
+		
+	}
+
+	public CoursesBean(int courseid, String coursename, int price) {
+		super();
+		this.courseid = courseid;
+		this.coursename = coursename;
+		this.price = price;
+	}
+
+	public int getCourseid() {
+		return courseid;
+	}
+
+	public void setCourseid(int courseid) {
+		this.courseid = courseid;
+	}
+
+	public String getCoursename() {
+		return coursename;
+	}
+
+	public void setCoursename(String coursename) {
+		this.coursename = coursename;
+	}
+
+	public int getPrice() {
+		return price;
+	}
+
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	
+}

@@ -1,0 +1,10 @@
+package exam;
+
+public class TreeSetProb {
+
+	public static void main(String[] args) {
+	  TreeSet ts = new TreeSet();
+
+	}
+
+}

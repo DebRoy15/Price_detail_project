@@ -1,0 +1,36 @@
+package java_Dbms;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+
+public class JDBCdemo {
+
+	public static void main(String[] args) {
+		String url = "jdbc:mysql://localhost:3306/Kodnest";
+		
+		try {
+			//Establish Connection
+			Connection conn = DriverManager.getConnection(url,"root","hellotest1234");
+			
+			//Create a statement
+			Statement st = conn.createStatement();
+			
+			//Execute the statement object
+			ResultSet rs = st.executeQuery("select * from NovStudent");
+			
+			//Process the result
+			while(rs.next()) {
+				System.out.println(rs.getString("name"));
+			}
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
+	}
+
+}

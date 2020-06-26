@@ -1,0 +1,42 @@
+package helloMRDev;
+
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+        Scanner scan = new Scanner(System.in);
+        String first = scan.nextLine();
+        String second = scan.nextLine();
+
+        Solution.swapping(first);
+        Solution.swapping(second);
+
+    }
+
+    public static void swapping(String word){
+        char wordarr[] = word.toCharArray();
+        char odd[] = new char[word.length()/2];
+        char even[] = new char[word.length()/2];
+        System.out.println(odd.length);
+        
+       int j =0;
+        for(int i =0;i<=word.length()-1;i++){
+            if(i%2 ==0){
+            	j--;
+                even[j]=wordarr[i];
+                j++;
+            }
+            else{
+                odd[j]=wordarr[i];
+                j++;
+            }
+        }
+        System.out.println(Arrays.toString(even)+" "+Arrays.toString(odd));
+    }
+}

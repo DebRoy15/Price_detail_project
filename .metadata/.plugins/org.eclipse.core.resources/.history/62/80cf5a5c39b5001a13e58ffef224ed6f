@@ -1,0 +1,2 @@
+spring.application.name=course-billing-service
+server.port=8400

@@ -1,0 +1,36 @@
+package exam;
+
+import java.util.HashSet;
+
+public class Hashprog {
+
+	public static void main(String[] args) {
+		/*HashSet<Student> hs = new HashSet<Student>();
+		hs.add(new Student("Ramu",22));
+		hs.add(new Student("Sita",23));
+		hs.add(new Student("Hanuman",20));
+		hs.add(new Student("Laksh",28));
+		hs.add(new Student("Rambo",50));
+		hs.add(new Student("Rambo",51));
+		System.out.println(hs);*/
+		
+		Price p1 = new Price("Banana",30);
+		Price p2 = new Price("Mango",50);
+		Price p3 = new Price("Apple",120);
+		Price p4 = new Price("Grepe",80);
+		HashSet<Price> hs = new HashSet<Price>;
+		hs.add(p1);
+		hs.add(p2);
+		hs.add(p3);
+		hs.add(p4);
+		System.out.println(hs);
+		Price duplicate = new Price("Banana",30);
+		hs.add(duplicate);
+		System.out.println(hs);
+		
+		
+		System.out.println("______________________");
+
+	}
+
+}

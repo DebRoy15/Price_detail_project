@@ -1,0 +1,31 @@
+package banking;
+
+import java.util.Scanner;
+
+public class BankingMain {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+	B: while(true) {
+			System.out.println("Welcome Sir");
+			System.out.println("Enter  1 for Registration \nENter 2 for logIn \nEnter 3 for Exit");
+			int choice = scan.nextInt();
+			switch (choice) {
+			case 1:
+				BankingMethods.registration();
+				break;
+			case 2:
+
+				BankingMethods.logIn();
+				break;
+
+			case 3:
+				BankingMethods.exit();
+				break B;
+			}
+		}
+		
+		
+
+	}
+}

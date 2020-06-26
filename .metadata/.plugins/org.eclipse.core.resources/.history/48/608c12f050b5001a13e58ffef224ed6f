@@ -1,0 +1,18 @@
+package com.onlinecourse.microservices.coursegettingservice;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.onlinecourse.microservices.currencyexchangeservice.ExchangeValue;
+
+@Repository
+public interface CoursesDetailsRepository extends JpaRepository<CoursesBean, Integer>  {
+
+	List<CoursesBean> getAllCourse();
+	
+	CoursesBean findByCourseId(int courseId);
+	
+
+}

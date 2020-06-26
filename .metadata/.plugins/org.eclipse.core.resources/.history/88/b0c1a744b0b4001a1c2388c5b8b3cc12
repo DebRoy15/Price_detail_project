@@ -1,0 +1,42 @@
+package com.onlinecourse.microservices.course-getting-service.coursecontrol;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.onlinecourse.microservices.gettingcourseid.service.CourseService;
+
+@RestController
+public class CourceIdController {
+	
+	@Autowired
+	CourseService courseserviceref;
+	
+	@GetMapping("/welcome")
+	public String welcome() {
+		return "Hello World";
+	}
+
+	@GetMapping("/courseid")
+	public List<Courses> getAllCourse(){
+		return courseserviceref.getAllCourse();
+	}
+	
+	@GetMapping("/courseid/{courseId}")
+	public Courses getCourseById(@PathVariable int courseId) {
+		return courseserviceref.getCourseById(courseId);
+	}
+	
+	@RequestMapping(method=RequestMethod.POST, value="/courses")
+	public void addCourse(@RequestBody Courses course){
+		 courseserviceref.addCourse(course);
+	}
+	
+
+}

@@ -1,0 +1,23 @@
+package exam;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class Occerence {
+
+	    public static void main(String[] args) {
+	        /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
+	       Scanner sc= new Scanner(System.in);
+	       System.out.println("Enter Prob");
+	       double prob= sc.nextDouble();
+	       System.out.println("enter Prize");
+	       double prize = sc.nextDouble();
+	       System.out.println("Enter Pay");
+	       double pay = sc.nextDouble();
+	       if(prob * prize > pay)
+	       {
+	    	   System.out.println("True");
+	       }
+	       else
+	    	   System.out.println("False");
+
+	    }
+	}

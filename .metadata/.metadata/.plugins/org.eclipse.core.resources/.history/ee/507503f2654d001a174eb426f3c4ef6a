@@ -1,0 +1,14 @@
+package exam;
+
+import java.util.Comparator;
+
+public class Help implements Comparator {
+	public int compare(Object arg0, Object arg1) {
+		if (((Student) arg0).age > ((Student) arg1).age) {
+			return 1;
+		} else {
+			return -1;
+		}
+	}
+
+}

@@ -1,0 +1,53 @@
+package com.onlinecourse.microservices.springbillingservice;
+
+public class BillingCourseBean {
+	
+	private int courseId;
+	private String courseName;
+	private int coursePrice;
+	
+	private int tax;
+
+	public BillingCourseBean(int courseId, String courseName, int coursePrice, int tax) {
+		super();
+		this.courseId = courseId;
+		this.courseName = courseName;
+		this.coursePrice = coursePrice;
+		this.tax = tax;
+	}
+
+	public int getCourseId() {
+		return courseId;
+	}
+
+	public void setCourseId(int courseId) {
+		this.courseId = courseId;
+	}
+
+	public String getCourseName() {
+		return courseName;
+	}
+
+	public void setCourseName(String courseName) {
+		this.courseName = courseName;
+	}
+
+	public int getCoursePrice() {
+		return coursePrice;
+	}
+
+	public void setCoursePrice(int coursePrice) {
+		this.coursePrice = coursePrice;
+	}
+
+	public int getTax() {
+		return tax;
+	}
+
+	public void setTax(int tax) {
+		this.tax = tax;
+	}
+	
+	
+
+}

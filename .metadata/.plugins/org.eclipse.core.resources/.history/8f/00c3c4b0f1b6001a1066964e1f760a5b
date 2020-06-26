@@ -1,0 +1,3 @@
+spring.application.name=currency-conversion-service
+server.port=8300
+course-billing-service.ribbon.listOfServers=http://localhost:8200,http://localhost:8201
